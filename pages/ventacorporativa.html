@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta Corporativa</title>
+    <link rel="shortcut icon" href="../img/logobarein.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="body-venta">
+    <header>
+        <nav class="navbar">
+            <ul class="navegador">
+                <li class="menu"><a href="../index.html">Inicio</a></li>
+                <li class="menu"><a href="./servicios.html">Servicios</a></li>
+                <li class="menu"><a href="./productos.html">Productos</a></li>
+                <li class="menu active"><a href="./ventacorporativa.html">Venta Corporativa</a></li>
+                <li class="menu"><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="logo">
+            <img class="logobarein" src="../img/logobarein.png" alt="logobarein">
+        </div>
+        <div class="caja-pirelli">
+            <div class="rectangulo">
+                <img class=logo-pirelli src="../img/logopirelli.png" alt="logopirelli">
+                <p class="distribuidor">Distribuidor Oficial</p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section>
+            <div>
+                <h1>Venta Corporativa</h1>
+                <form action="formulario" method="get">
+                    <label for="Empresa" name="Empresa">Empresa
+                        <input type="text" id="Empresa" required>
+                    </label>
+                    <label for="Telefono" name="Telefono">Telefono
+                        <input type="number" id="Telefono" required>
+                    </label>
+                    <label for="E-mail" name="email">E-mail
+                        <input type="email" id="E-mail" required>
+                    </label>
+                    <label for="Consulta" name="consulta">Consulta
+                        <textarea name="Consulta" id="Consulta" cols="30" rows="10" required></textarea>
+                    </label>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Confían en nosotros</h2>
+                <img src="../img/logochapelco.jpg" alt="logochapelco">
+                <img src="../img/logogrido.jpg" alt="logogrido">
+                <img src="../img/logomovistar.png" alt="logomovistar">
+                <img src="../img/logopiuterra.jpg" alt="logopiuterra">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="foot-container">
+            <div>
+                <div>
+                    <h1 class="titulo-final">Barein GP</h1>
+                    <div class="datos-barein">
+                        <p>Casa central</p>
+                        <div class="location">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <p>Av. Hipólito Yrigoyen 960</p>
+                                <p>1665, José C. Paz, Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="phone">
+                        <i class="bi bi-telephone"></i>
+                        <p>02320430402</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="links-container">
+                <ul class="contact-links">
+                    <li><a target="_blank" href="https://www.facebook.com/BareinGP/about?locale=es_LA"><i class="bi bi-facebook"></i></a></li>
+                    <li><i class="bi bi-whatsapp"></i></li>
+                    <li><a target="_blank" href="contacto@bareingp.com"><i class="bi bi-envelope"></i></a></li>
+                </ul>
+            </div> 
+        </div>   
+        <div class="copyright"><p>© 2023 Pablo Demian Diaz</p></div>
+    </footer>
+</body>
+</html>

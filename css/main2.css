@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;600&family=Poppins:wght@200;400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* font-family: 'Antonio', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.body-index {
+    background-image: url(../img/fondoindex.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    position: sticky;
+    top: 0;  
+}
+
+.navegador {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    background-color: #4c4b4b; 
+}
+
+.navegador a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a {
+    padding: 0.5rem;
+    border: 2px solid #4c4b4b;
+}
+
+.menu a:hover {
+    border: 2px solid white;
+}
+
+.menu.active a {
+    border: 2px solid white;
+}
+
+.logo {
+    display:flex;
+    justify-content: center;
+}
+
+.logobarein {
+    width: 12rem;
+}
+
+.caja-pirelli {
+    display: flex;
+    justify-content: center;
+}
+
+.rectangulo {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 3vw;
+    padding-top: 1vw;
+    border: 1px solid white;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #ffffff3b;
+}
+
+.logo-pirelli {
+    width: 100%;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+}
+
+.textoinicio {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: 1px solid white;
+    border-radius: 1%;
+    background-color: #ffffff3b;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+footer {
+    color: white;
+    font-family: 'Antonio', sans-serif;
+    margin-top: 3rem;
+}
+
+.foot-container {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-inline: 2rem;
+}
+
+.datos-barein {
+    margin-top: 2rem;
+}
+
+.copyright {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.links-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;  
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+
+/* estilos contacto */
+
+.body-contacto {
+    background-image: url(../img/fondocontacto.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* estilos productos */
+
+.body-productos {
+    background-image: url(../img/fondoproductos.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .05fr 1fr 1fr;
+    grid-template-areas: 
+        "titulo   titulo"
+        "pzero    cinturato"
+        "scorpion chrono";
+    row-gap: 3rem;
+    column-gap: 7rem;
+    margin-inline: 7rem;
+}
+
+.prod-title {
+    grid-area: titulo;
+    justify-self: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 5px grey; 
+}
+
+.flia-pzero {
+    grid-area: pzero;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.flia-cinturato {
+    grid-area: cinturato;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.flia-scorpion {
+    grid-area: scorpion;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.flia-chrono {
+    grid-area: chrono;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.flia-pzero:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.flia-pzero:hover .family-title {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.flia-cinturato:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.flia-cinturato:hover .family-title {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.flia-scorpion:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.flia-scorpion:hover .family-title {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.flia-chrono:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.flia-chrono:hover .family-title {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.family-title {
+    background-color: rgba(133, 126, 126, 0.715);
+    padding-inline: 1rem;
+}
+
+.family-img {
+    width: 100%;
+}
+
+.family-text {
+    text-align: justify;
+}
+
+/* estilos servicios */
+
+.body-servicios {
+    background-image: url(../img/fondoservicios.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .05fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "titulo     titulo     titulo     titulo     titulo     titulo"
+        "alineacion alineacion alineacion suspension suspension suspension"
+        "balanceo   balanceo   frenos     frenos     tren       tren"
+        ".          .          mecanica   mecanica   .          .";
+    row-gap: 3rem;
+    column-gap: 7rem;
+    margin-inline: 7rem;
+}
+
+.serv-title {
+    grid-area: titulo;
+    justify-self: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 5px grey; 
+}
+
+.serv-alineacion {
+    grid-area: alineacion;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.serv-balanceo {
+    grid-area: balanceo;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.serv-frenos {
+    grid-area: frenos;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.serv-suspension {
+    grid-area: suspension;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.serv-tren {
+    grid-area: tren;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.serv-mecanica {
+    grid-area: mecanica;
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.serv-alineacion:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.serv-alineacion:hover .subtitle {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.serv-balanceo:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.serv-balanceo:hover .subtitle {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.serv-frenos:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.serv-frenos:hover .subtitle {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.serv-suspension:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.serv-suspension:hover .subtitle {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.serv-tren:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.serv-tren:hover .subtitle {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.serv-mecanica:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.serv-mecanica:hover .subtitle {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.subtitle {
+    background-color: rgba(133, 126, 126, 0.715);
+    padding-inline: 1rem;
+}
+
+.serv-img {
+    width: 100%;
+}
+
+/* estilos venta corporativa */
+
+.body-venta {
+    background-image: url(../img/fondoventa.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+/* Media Queries */
+
+@media (min-width: 599px) {
+    .navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-desktop {
+        display: none;
+    }
+    .navbar {
+        position: sticky;
+        top: 0;
+    }
+    .logo-container {
+        margin-top: 1rem;
+    }
+    .principal {
+        font-size: 0.8rem;
+    }   
+    .titulo1 {
+        font-size: 1.5rem;
+    }
+    .textoinicio {
+        padding: 1rem;
+    }
+    .logobarein {
+        width: 5rem;
+    }
+    .foot-container {
+        font-size: 0.8rem;
+    }
+    .copyright {
+        font-size: 0.8rem;
+    }
+    .distribuidor {
+        font-size: 0.8rem;
+    }
+    .contact-links {
+        flex-direction: column;
+    }
+}
