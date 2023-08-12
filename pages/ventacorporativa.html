@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venta Corporativa</title>
     <link rel="shortcut icon" href="../img/logobarein.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/main2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main2.css">
 </head>
 <body class="body-venta">
     <header>
-        <nav class="navbar">
+        <nav class="navbar-desktop">
             <ul class="navegador">
                 <li class="menu"><a href="../index.html">Inicio</a></li>
                 <li class="menu"><a href="./servicios.html">Servicios</a></li>
@@ -19,8 +20,37 @@
                 <li class="menu"><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">BAREIN GP</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./servicios.html">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./productos.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./ventacorporativa.html">Venta Corporativa</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
     </header>
-    <div>
+    <div class="logo-container">
         <div class="logo">
             <img class="logobarein" src="../img/logobarein.png" alt="logobarein">
         </div>
@@ -34,8 +64,10 @@
     <main>
         <section>
             <div>
-                <h1>Venta Corporativa</h1>
-                <form action="formulario" method="get">
+                <h1 class="title-venta">Venta Corporativa</h1>
+
+                <!-- Este era mi formulario original, sin Bootstrap -->
+                <!-- <form action="formulario" method="get">
                     <label for="Empresa" name="Empresa">Empresa
                         <input type="text" id="Empresa" required>
                     </label>
@@ -50,16 +82,46 @@
                     </label>
                     <button type="submit">Enviar</button>
                     <button type="reset">Borrar</button>
+                </form> -->
+
+                <form action="formulario">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Empresa</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Empresa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Telefono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">E-Mail</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
                 </form>
+
             </div>
         </section>
         <section>
             <div>
-                <h2>Confían en nosotros</h2>
-                <img src="../img/logochapelco.jpg" alt="logochapelco">
-                <img src="../img/logogrido.jpg" alt="logogrido">
-                <img src="../img/logomovistar.png" alt="logomovistar">
-                <img src="../img/logopiuterra.jpg" alt="logopiuterra">
+                <h2 class="title-trust">Confían en nosotros</h2>
+                <div class="marcas">
+                    <div class="cliente">
+                        <img src="../img/logochapelco.jpg" alt="logochapelco">
+                    </div>
+                    <div class="cliente">
+                        <img src="../img/logogrido.jpg" alt="logogrido">
+                    </div>
+                    <div class="cliente">
+                        <img src="../img/logomovistar.png" alt="logomovistar">
+                    </div>
+                    <div class="cliente">
+                        <img src="../img/logopiuterra.jpg" alt="logopiuterra">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -94,5 +156,7 @@
         </div>   
         <div class="copyright"><p>© 2023 Pablo Demian Diaz</p></div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

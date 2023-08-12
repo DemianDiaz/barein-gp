@@ -463,6 +463,43 @@ footer {
     background-attachment: fixed;
 }
 
+.mb-3 {
+    margin-inline: 5rem;
+}
+
+.form-label {
+    color: white;
+    font-weight: 400;
+}
+
+.title-venta {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 5px grey;
+    text-align: center;
+}
+
+.title-trust {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 5px grey;
+    text-align: center;
+    margin: 2rem;
+    margin-bottom: 3rem;
+}
+
+.marcas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.cliente {
+    border: 1px solid grey;
+    
+}
 
 
 /* Media Queries */
@@ -486,7 +523,7 @@ footer {
     }
     .principal {
         font-size: 0.8rem;
-    }   
+    }
     .titulo1 {
         font-size: 1.5rem;
     }
@@ -507,5 +544,55 @@ footer {
     }
     .contact-links {
         flex-direction: column;
+    }
+    .grid-servicios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin-inline: 2rem;
+    }
+    .serv-title {
+        text-align: center;
+    }
+    .productos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .prod-title {
+        text-align: center;
+    }
+    .title-trust {
+        margin-bottom: 1rem;
+    }
+    .marcas {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .cliente {
+        max-width: 30vw;
+    }
+    .mb-3 {
+        margin-inline: 3rem;
+    }
+    .family-title {
+        font-size: 1.5rem;
+    }
+    .family-text {
+        font-size: 0.8rem;
+    }
+    .prod-title {
+        text-align: center;
+    }
+    .productos {
+        margin-inline: 2rem;
+    }
+    .serv-title {
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 1.0rem;
     }
 }
