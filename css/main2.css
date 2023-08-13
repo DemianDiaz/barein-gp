@@ -171,6 +171,20 @@ footer {
     background-attachment: fixed;
 }
 
+.locations {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.contact-title {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 5px grey;
+    margin-bottom: 3rem;
+}
 
 /* estilos productos */
 
@@ -594,5 +608,30 @@ footer {
     }
     .subtitle {
         font-size: 1.0rem;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-inline: 2rem;
+    }
+
+    .ubicaciones {
+        z-index: 1;
+    }
+
+    .zindex {
+        z-index: 2;
+    }
+    
+    .maps {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1042px) {
+    .locations {
+        margin-inline: 2rem;
     }
 }
