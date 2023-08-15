@@ -23,7 +23,7 @@ font-family: 'Poppins', sans-serif; */
 header {
     position: sticky;
     top: 0; 
-    z-index: 1; 
+    z-index: 2; 
 }
 
 .navegador {
@@ -172,9 +172,10 @@ footer {
 /* estilos contacto */
 
 .body-contacto {
-    background-image: url(../img/fondocontacto.jpg);
+    background-image: url(../img/pirelliwall5.jpg);
     background-size: cover;
     background-attachment: fixed;
+    background-position: top center;
 }
 
 .locations {
@@ -201,6 +202,10 @@ footer {
     font-size: 0.8rem;
 }
 
+.carousel-item p {
+    margin-bottom: 0 !important;
+}
+
 .suc-mobile {
     display: flex;
     flex-direction: column;
@@ -218,6 +223,10 @@ footer {
     transition: 0.5s;
     margin-inline: 1rem;
     width: 100%;
+}
+
+.ubicaciones {
+    width: 30%;
 }
 
 .locales:hover {
@@ -243,9 +252,10 @@ footer {
 /* estilos productos */
 
 .body-productos {
-    background-image: url(../img/fondoproductos.jpg);
+    background-image: url(../img/pirelliwall4.webp);
     background-size: cover;
     background-attachment: fixed;
+    background-position: top right;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -526,7 +536,7 @@ footer {
 /* estilos venta corporativa */
 
 .body-venta {
-    background-image: url(../img/fondoventa.jpg);
+    background-image: url(../img/pirelliwall2.png);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -632,6 +642,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+        margin-inline: 2rem !important;
     }
     .prod-title {
         text-align: center;
@@ -650,7 +661,7 @@ footer {
         margin-inline: 3rem;
     }
     .family-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .family-text {
         font-size: 0.8rem;
@@ -685,6 +696,21 @@ footer {
     
     .maps {
         width: 80vw;
+    }
+    .loc-title {
+        font-size: 1rem;
+    }
+    .loc-text {
+        font-size: 0.8rem;
+    }
+    .body-productos {
+        background-image: url(../img/pirelliwall7.jpg);
+        background-position: top center;
+    }
+
+    .body-venta {
+        background-image: url(../img/pirelliwall7.jpg);
+        background-position: top center;
     }
 }
 
@@ -738,6 +764,10 @@ footer {
     .locations {
         margin-inline: 2rem;
     }
+
+    .ubicaciones {
+        width: 50%;
+    }
 }
 
 @media (max-width: 870px) {
@@ -748,5 +778,9 @@ footer {
 
     .grid-servicios {
         margin-inline: 1rem;
+    }
+
+    .ubicaciones {
+        width: 60%;
     }
 }
