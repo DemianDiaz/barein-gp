@@ -95,7 +95,6 @@ header {
 }
 
 .textoinicio {
-    width: 60%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -107,6 +106,7 @@ header {
     border-radius: 1%;
     background-color: #ffffff3b;
     margin-bottom: 2rem;
+    margin-inline: 7rem;
     padding: 1rem;
 }
 
@@ -176,6 +176,7 @@ footer {
     justify-content: center;
     gap: 2rem;
     align-items: center;
+    margin-block: 1rem;
 }
 
 .contact-title {
@@ -184,6 +185,47 @@ footer {
     font-size: 2rem;
     text-shadow: 2px 5px grey;
     margin-bottom: 3rem;
+}
+
+.loc-text {
+    text-align: center;
+}
+
+.carousel-item {
+    font-size: 0.8rem;
+}
+
+.suc-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.locales {
+    background-color: #e7e6e6a0;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.5s;
+    margin-inline: 1rem;
+}
+
+.locales:hover {
+    border: 3px solid #dddd70;
+    background-color: #dddd70a3;
+    margin-inline: 0.5rem;
+}
+
+.locales:hover .loc-title {
+    text-align: center;
+    color: #7d1f1f;
+}
+
+.loc-title {
+    background-color: rgba(133, 126, 126, 0.715);
+    padding-inline: 1rem;
 }
 
 /* estilos productos */
@@ -542,7 +584,8 @@ footer {
         font-size: 1.5rem;
     }
     .textoinicio {
-        padding: 1rem;
+        padding: 0.5rem;
+        gap: 0.5rem;
     }
     .logobarein {
         width: 5rem;
@@ -630,8 +673,65 @@ footer {
     }
 }
 
-@media (max-width: 1042px) {
+@media (min-width: 768px) {
+    .suc-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 769px) {
+    .locations {
+        display: none;
+    }
+
+    .productos {
+        row-gap: 2rem;
+        column-gap: 0.5rem;
+        margin-inline: 1rem;
+    }
+
+    .family-text {
+        font-size: 0.8rem;
+    }
+
+    .textoinicio {
+        margin-inline: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid-servicios {
+        row-gap: 2rem;
+        column-gap: 4rem;
+        margin-inline: 4rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .productos {
+        row-gap: 2rem;
+        column-gap: 4rem;
+        margin-inline: 4rem;
+    }
+
+    .marcas {
+        margin-inline: 2rem;
+    }
+
     .locations {
         margin-inline: 2rem;
+    }
+}
+
+@media (max-width: 870px) {
+    .subtitle {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .grid-servicios {
+        margin-inline: 1rem;
     }
 }
