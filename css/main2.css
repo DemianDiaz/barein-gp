@@ -207,6 +207,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-inline: 3rem;
 }
 
 .locales {
@@ -216,6 +217,7 @@ footer {
     padding: 1rem;
     transition: 0.5s;
     margin-inline: 1rem;
+    width: 100%;
 }
 
 .locales:hover {
@@ -232,6 +234,10 @@ footer {
 .loc-title {
     background-color: rgba(133, 126, 126, 0.715);
     padding-inline: 1rem;
+}
+
+.loc-img {
+    width: 100%;
 }
 
 /* estilos productos */
