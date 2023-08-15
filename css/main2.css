@@ -22,7 +22,8 @@ font-family: 'Poppins', sans-serif; */
 
 header {
     position: sticky;
-    top: 0;  
+    top: 0; 
+    z-index: 1; 
 }
 
 .navegador {
@@ -70,13 +71,12 @@ header {
 }
 
 .rectangulo {
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-block: 3vw;
-    padding-top: 1vw;
+    margin-block: 1vw;
+    padding-block: 0.2rem;
     border: 1px solid white;
     font-family: 'Antonio', sans-serif;
     font-weight: 600;
@@ -84,6 +84,12 @@ header {
     text-align: center;
     background-color: #ffffff3b;
 }
+
+.distribuidor {
+    padding-inline: 0.5rem;
+    margin-bottom: 0 !important;
+}
+
 
 .logo-pirelli {
     width: 100%;
@@ -588,7 +594,10 @@ footer {
         gap: 0.5rem;
     }
     .logobarein {
-        width: 5rem;
+        width: 7rem;
+    }
+    .rectangulo {
+        width: 7rem;
     }
     .foot-container {
         font-size: 0.8rem;
