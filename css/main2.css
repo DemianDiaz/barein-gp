@@ -550,6 +550,14 @@ footer {
     font-weight: 400;
 }
 
+.btn-venta {
+    margin-right: 0 !important;
+}
+
+.btn-reset {
+    margin-left: 1rem !important;
+}
+
 .title-venta {
     color: white;
     font-size: 2rem;
@@ -576,7 +584,6 @@ footer {
 
 .cliente {
     border: 1px solid grey;
-    
 }
 
 
