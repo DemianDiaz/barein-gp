@@ -1,0 +1,10 @@
+.body-venta {
+    background-image: url(../img/pirelliwall2.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include mobile {
+        background-image: url(../img/pirelliwall7.jpg);
+        background-position: top center;
+    }
+}

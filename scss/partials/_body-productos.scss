@@ -1,0 +1,12 @@
+.body-productos {
+    background-image: url(../img/pirelliwall4.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top right;
+    font-family: 'Poppins', sans-serif;
+
+    @include mobile {
+        background-image: url(../img/pirelliwall7.jpg);
+        background-position: top center;
+    }
+}

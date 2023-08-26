@@ -1,0 +1,119 @@
+.contacto-section {
+
+    .contact-title {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        text-shadow: 2px 5px grey;
+        margin-bottom: 3rem;
+    }
+
+    .suc-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-inline: 3rem;
+
+        @include desktop {
+            display: none;
+        }
+
+        .locales {
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+            margin-inline: 1rem;
+            width: 100%;
+
+            .loc-title {
+                background-color: rgba(133, 126, 126, 0.715);
+                padding-inline: 1rem;
+
+                @include mobile {
+                    font-size: 1rem;
+                }
+            }
+
+            .loc-text {
+                text-align: center;
+
+                @include mobile {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .loc-img {
+                width: 100%;
+            }
+         
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .loc-title {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+    }
+
+    .locations {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        margin-block: 1rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-inline: 2rem;
+        }
+
+        @include tabletsmall {
+            display: none;
+        }
+
+        @include panoramic {
+            margin-inline: 2rem;
+        }
+
+        .ubicaciones {
+            width: 30%;
+
+            @include mobile {
+                z-index: 1;
+            }
+
+            @include panoramic {
+                width: 50%;
+            }
+
+            @include tabletlarge {
+                width: 60%;
+            }
+
+            .carousel-item {
+                font-size: 0.8rem;
+
+                .carousel-item p {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+
+        .maps {
+            @include mobile {
+                width: 80vw;
+                padding: 1rem;
+            }
+        }
+    }
+}

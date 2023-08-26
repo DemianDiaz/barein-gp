@@ -1,0 +1,56 @@
+.logo-container {
+
+    @include mobile {
+        margin-top: 1rem;
+    }
+
+    .logo {
+        display:flex;
+        justify-content: center;
+
+        .logobarein {
+            width: 12rem;
+
+            @include mobile {
+                width: 7rem;
+            }
+        }
+    }
+
+    .caja-pirelli {
+        display: flex;
+        justify-content: center;
+
+        .rectangulo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-block: 1vw;
+            padding-block: 0.2rem;
+            border: 1px solid white;
+            font-family: 'Antonio', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: #ffffff3b;
+
+            @include mobile {
+                width: 7rem;
+            }
+
+            .logo-pirelli {
+                width: 100%;
+            }
+
+            .distribuidor {
+                padding-inline: 0.5rem;
+                margin-bottom: 0 !important;
+
+                @include mobile {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

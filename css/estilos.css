@@ -1,0 +1,749 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;600&family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.body-index {
+  background-image: url(../img/fondoindex.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+@media screen and (min-width: 599px) {
+  header .navbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .navbar {
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .zindex {
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .navbar-desktop {
+    display: none;
+  }
+}
+header .navbar-desktop .navegador {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-family: "Antonio", sans-serif;
+  font-weight: 600;
+  background-color: #4c4b4b;
+}
+header .navbar-desktop .navegador .menu a {
+  padding: 0.5rem;
+  border: 2px solid #4c4b4b;
+}
+header .navbar-desktop .navegador .menu a:hover {
+  border: 2px solid white;
+}
+header .navbar-desktop .navegador .active a {
+  border: 2px solid white;
+}
+header .navbar-desktop .navegador a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .logo-container {
+    margin-top: 1rem;
+  }
+}
+.logo-container .logo {
+  display: flex;
+  justify-content: center;
+}
+.logo-container .logo .logobarein {
+  width: 12rem;
+}
+@media screen and (max-width: 600px) {
+  .logo-container .logo .logobarein {
+    width: 7rem;
+  }
+}
+.logo-container .caja-pirelli {
+  display: flex;
+  justify-content: center;
+}
+.logo-container .caja-pirelli .rectangulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1vw;
+  padding-block: 0.2rem;
+  border: 1px solid white;
+  font-family: "Antonio", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.231372549);
+}
+@media screen and (max-width: 600px) {
+  .logo-container .caja-pirelli .rectangulo {
+    width: 7rem;
+  }
+}
+.logo-container .caja-pirelli .rectangulo .logo-pirelli {
+  width: 100%;
+}
+.logo-container .caja-pirelli .rectangulo .distribuidor {
+  padding-inline: 0.5rem;
+  margin-bottom: 0 !important;
+}
+@media screen and (max-width: 600px) {
+  .logo-container .caja-pirelli .rectangulo .distribuidor {
+    font-size: 0.8rem;
+  }
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .principal {
+    font-size: 0.8rem;
+  }
+}
+.principal .textoinicio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  border: 1px solid white;
+  border-radius: 1%;
+  background-color: rgba(255, 255, 255, 0.231372549);
+  margin-bottom: 2rem;
+  margin-inline: 7rem;
+  padding: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .principal .textoinicio {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .principal .textoinicio {
+    margin-inline: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .principal .textoinicio .textoinicio .titulo1 {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  color: white;
+  font-family: "Antonio", sans-serif;
+  margin-top: 3rem;
+}
+footer .foot-container {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-inline: 2rem;
+}
+@media screen and (max-width: 600px) {
+  footer .foot-container {
+    font-size: 0.8rem;
+  }
+}
+footer .foot-container .info-foot .datos-barein {
+  margin-top: 2rem;
+}
+footer .foot-container .info-foot .datos-barein .location {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+footer .foot-container .info-foot .datos-barein .phone {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+footer .foot-container .links-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+footer .foot-container .links-container .contact-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  footer .foot-container .links-container .contact-links {
+    flex-direction: column;
+  }
+}
+footer .copyright {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  footer .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+.body-contacto {
+  background-image: url(../img/pirelliwall5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+}
+
+.contacto-section .contact-title {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 5px grey;
+  margin-bottom: 3rem;
+}
+.contacto-section .suc-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-inline: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .contacto-section .suc-mobile {
+    display: none;
+  }
+}
+.contacto-section .suc-mobile .locales {
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+  margin-inline: 1rem;
+  width: 100%;
+}
+.contacto-section .suc-mobile .locales .loc-title {
+  background-color: rgba(133, 126, 126, 0.715);
+  padding-inline: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .contacto-section .suc-mobile .locales .loc-title {
+    font-size: 1rem;
+  }
+}
+.contacto-section .suc-mobile .locales .loc-text {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .contacto-section .suc-mobile .locales .loc-text {
+    font-size: 0.8rem;
+  }
+}
+.contacto-section .suc-mobile .locales .loc-img {
+  width: 100%;
+}
+.contacto-section .suc-mobile .locales:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.contacto-section .suc-mobile .locales:hover .loc-title {
+  text-align: center;
+  color: #7d1f1f;
+}
+.contacto-section .locations {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin-block: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .contacto-section .locations {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .contacto-section .locations {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contacto-section .locations {
+    margin-inline: 2rem;
+  }
+}
+.contacto-section .locations .ubicaciones {
+  width: 30%;
+}
+@media screen and (max-width: 600px) {
+  .contacto-section .locations .ubicaciones {
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contacto-section .locations .ubicaciones {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .contacto-section .locations .ubicaciones {
+    width: 60%;
+  }
+}
+.contacto-section .locations .ubicaciones .carousel-item {
+  font-size: 0.8rem;
+}
+.contacto-section .locations .ubicaciones .carousel-item .carousel-item p {
+  margin-bottom: 0 !important;
+}
+@media screen and (max-width: 600px) {
+  .contacto-section .locations .maps {
+    width: 80vw;
+    padding: 1rem;
+  }
+}
+
+.body-productos {
+  background-image: url(../img/pirelliwall4.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top right;
+  font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  .body-productos {
+    background-image: url(../img/pirelliwall7.jpg);
+    background-position: top center;
+  }
+}
+
+.productos-section .productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.05fr 1fr 1fr;
+  grid-template-areas: "titulo   titulo" "pzero    cinturato" "scorpion chrono";
+  row-gap: 3rem;
+  column-gap: 7rem;
+  margin-inline: 7rem;
+}
+@media screen and (max-width: 600px) {
+  .productos-section .productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-inline: 2rem !important;
+  }
+}
+@media screen and (max-width: 769px) {
+  .productos-section .productos {
+    row-gap: 2rem;
+    column-gap: 0.5rem;
+    margin-inline: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .productos-section .productos {
+    row-gap: 2rem;
+    column-gap: 4rem;
+    margin-inline: 4rem;
+  }
+}
+.productos-section .productos .prod-title {
+  grid-area: titulo;
+  justify-self: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 5px grey;
+}
+@media screen and (max-width: 600px) {
+  .productos-section .productos .prod-title {
+    text-align: center;
+  }
+}
+.productos-section .productos .flia-pzero {
+  grid-area: pzero;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.productos-section .productos .flia-pzero:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.productos-section .productos .flia-pzero:hover .family-title {
+  text-align: center;
+  color: #7d1f1f;
+}
+.productos-section .productos .flia-cinturato {
+  grid-area: cinturato;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.productos-section .productos .flia-cinturato:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.productos-section .productos .flia-cinturato:hover .family-title {
+  text-align: center;
+  color: #7d1f1f;
+}
+.productos-section .productos .flia-scorpion {
+  grid-area: scorpion;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.productos-section .productos .flia-scorpion:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.productos-section .productos .flia-scorpion:hover .family-title {
+  text-align: center;
+  color: #7d1f1f;
+}
+.productos-section .productos .flia-chrono {
+  grid-area: chrono;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.productos-section .productos .flia-chrono:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.productos-section .productos .flia-chrono:hover .family-title {
+  text-align: center;
+  color: #7d1f1f;
+}
+.productos-section .productos .family-title {
+  background-color: rgba(133, 126, 126, 0.715);
+  padding-inline: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .productos-section .productos .family-title {
+    font-size: 1rem;
+  }
+}
+.productos-section .productos .family-img {
+  width: 100%;
+}
+.productos-section .productos .family-text {
+  text-align: justify;
+}
+@media screen and (max-width: 600px) {
+  .productos-section .productos .family-text {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .productos-section .productos .family-text {
+    font-size: 0.8rem;
+  }
+}
+
+.body-servicios {
+  background-image: url(../img/fondoservicios.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+}
+
+.servicios-section .grid-servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.05fr 1fr 1fr 1fr;
+  grid-template-areas: "titulo     titulo     titulo     titulo     titulo     titulo" "alineacion alineacion alineacion suspension suspension suspension" "balanceo   balanceo   frenos     frenos     tren       tren" ".          .          mecanica   mecanica   .          .";
+  row-gap: 3rem;
+  column-gap: 7rem;
+  margin-inline: 7rem;
+}
+@media screen and (max-width: 600px) {
+  .servicios-section .grid-servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .servicios-section .grid-servicios {
+    row-gap: 2rem;
+    column-gap: 4rem;
+    margin-inline: 4rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .servicios-section .grid-servicios {
+    margin-inline: 1rem;
+  }
+}
+.servicios-section .grid-servicios .serv-title {
+  grid-area: titulo;
+  justify-self: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 5px grey;
+}
+@media screen and (max-width: 600px) {
+  .servicios-section .grid-servicios .serv-title {
+    text-align: center;
+  }
+}
+.servicios-section .grid-servicios .serv-alineacion {
+  grid-area: alineacion;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.servicios-section .grid-servicios .serv-alineacion:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.servicios-section .grid-servicios .serv-alineacion:hover .subtitle {
+  text-align: center;
+  color: #7d1f1f;
+}
+.servicios-section .grid-servicios .serv-balanceo {
+  grid-area: balanceo;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.servicios-section .grid-servicios .serv-balanceo:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.servicios-section .grid-servicios .serv-balanceo:hover .subtitle {
+  text-align: center;
+  color: #7d1f1f;
+}
+.servicios-section .grid-servicios .serv-frenos {
+  grid-area: frenos;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.servicios-section .grid-servicios .serv-frenos:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.servicios-section .grid-servicios .serv-frenos:hover .subtitle {
+  text-align: center;
+  color: #7d1f1f;
+}
+.servicios-section .grid-servicios .serv-suspension {
+  grid-area: suspension;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.servicios-section .grid-servicios .serv-suspension:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.servicios-section .grid-servicios .serv-suspension:hover .subtitle {
+  text-align: center;
+  color: #7d1f1f;
+}
+.servicios-section .grid-servicios .serv-tren {
+  grid-area: tren;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.servicios-section .grid-servicios .serv-tren:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.servicios-section .grid-servicios .serv-tren:hover .subtitle {
+  text-align: center;
+  color: #7d1f1f;
+}
+.servicios-section .grid-servicios .serv-mecanica {
+  grid-area: mecanica;
+  background-color: rgba(231, 230, 230, 0.6274509804);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.servicios-section .grid-servicios .serv-mecanica:hover {
+  border: 3px solid #dddd70;
+  background-color: rgba(221, 221, 112, 0.6392156863);
+  margin-inline: 0.5rem;
+}
+.servicios-section .grid-servicios .serv-mecanica:hover .subtitle {
+  text-align: center;
+  color: #7d1f1f;
+}
+.servicios-section .grid-servicios .subtitle {
+  background-color: rgba(133, 126, 126, 0.715);
+  padding-inline: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .servicios-section .grid-servicios .subtitle {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .servicios-section .grid-servicios .subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .servicios-section .grid-servicios .subtitle {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+.servicios-section .grid-servicios .serv-img {
+  width: 100%;
+}
+
+.body-venta {
+  background-image: url(../img/pirelliwall2.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 600px) {
+  .body-venta {
+    background-image: url(../img/pirelliwall7.jpg);
+    background-position: top center;
+  }
+}
+
+.venta-section .title-venta {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 5px grey;
+  text-align: center;
+}
+.venta-section .vta-form .mb-3 {
+  margin-inline: 5rem;
+}
+@media screen and (max-width: 600px) {
+  .venta-section .vta-form .mb-3 {
+    margin-inline: 3rem;
+  }
+}
+.venta-section .vta-form .mb-3 .form-label {
+  color: white;
+  font-weight: 400;
+}
+.venta-section .vta-form .botones .btn-venta {
+  margin-right: 0 !important;
+}
+.venta-section .vta-form .botones .btn-reset {
+  margin-left: 1rem !important;
+}
+
+.trust-section .trust-container .title-trust {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 5px grey;
+  text-align: center;
+  margin: 2rem;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .trust-section .trust-container .title-trust {
+    margin-bottom: 1rem;
+  }
+}
+.trust-section .trust-container .marcas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .trust-section .trust-container .marcas {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .trust-section .trust-container .marcas {
+    margin-inline: 2rem;
+  }
+}
+.trust-section .trust-container .marcas .cliente {
+  border: 1px solid grey;
+}
+@media screen and (max-width: 600px) {
+  .trust-section .trust-container .marcas .cliente {
+    max-width: 30vw;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

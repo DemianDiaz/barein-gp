@@ -1,0 +1,36 @@
+.venta-section {
+
+    .title-venta {
+        color: white;
+        font-size: 2rem;
+        text-shadow: 2px 5px grey;
+        text-align: center;
+    }
+
+    .vta-form {
+
+        .mb-3 {
+            margin-inline: 5rem;
+
+            @include mobile {
+                margin-inline: 3rem;
+            }
+
+            .form-label {
+                color: white;
+                font-weight: 400;
+            }
+        }
+
+        .botones {
+
+            .btn-venta {
+                margin-right: 0 !important;
+            }
+            
+            .btn-reset {
+                margin-left: 1rem !important;
+            }
+        }
+    }
+}

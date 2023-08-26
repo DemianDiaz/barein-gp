@@ -1,0 +1,66 @@
+footer {
+    color: white;
+    font-family: 'Antonio', sans-serif;
+    margin-top: 3rem;
+
+    .foot-container {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        padding-inline: 2rem;
+
+        @include mobile {
+            font-size: 0.8rem;
+        }
+
+        .info-foot {
+
+            .datos-barein {
+                margin-top: 2rem;
+
+                .location {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+                
+                .phone {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                }
+            }
+
+        }
+
+        .links-container {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            
+            .contact-links {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+                font-size: 1.5rem;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    .copyright {
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+
+        @include mobile {
+            font-size: 0.8rem;
+        }
+    }
+}

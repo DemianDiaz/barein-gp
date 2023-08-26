@@ -1,0 +1,39 @@
+.principal {
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+        font-size: 0.8rem;
+    }
+
+    .textoinicio {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        border: 1px solid white;
+        border-radius: 1%;
+        background-color: #ffffff3b;
+        margin-bottom: 2rem;
+        margin-inline: 7rem;
+        padding: 1rem;
+
+        @include mobile {
+            padding: 0.5rem;
+            gap: 0.5rem;
+        }
+
+        @include tabletsmall {
+            margin-inline: 3rem;
+        }
+
+        .textoinicio .titulo1 {
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

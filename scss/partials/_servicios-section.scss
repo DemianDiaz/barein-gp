@@ -1,0 +1,188 @@
+.servicios-section {
+
+    .grid-servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: .05fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "titulo     titulo     titulo     titulo     titulo     titulo"
+            "alineacion alineacion alineacion suspension suspension suspension"
+            "balanceo   balanceo   frenos     frenos     tren       tren"
+            ".          .          mecanica   mecanica   .          .";
+        row-gap: 3rem;
+        column-gap: 7rem;
+        margin-inline: 7rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            margin-inline: 2rem;
+        }
+
+        @include panoramic {
+            row-gap: 2rem;
+            column-gap: 4rem;
+            margin-inline: 4rem;
+        }
+
+        @include tabletlarge {
+            margin-inline: 1rem;
+        }
+
+        .serv-title {
+            grid-area: titulo;
+            justify-self: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 5px grey;
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        .serv-alineacion {
+            grid-area: alineacion;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .subtitle {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .serv-balanceo {
+            grid-area: balanceo;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .subtitle {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .serv-frenos {
+            grid-area: frenos;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .subtitle {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .serv-suspension {
+            grid-area: suspension;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .subtitle {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .serv-tren {
+            grid-area: tren;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .subtitle {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .serv-mecanica {
+            grid-area: mecanica;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .subtitle {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+    }
+
+    .grid-servicios .subtitle {
+        background-color: rgba(133, 126, 126, 0.715);
+        padding-inline: 1rem;
+
+        @include mobile {
+            font-size: 1.0rem;
+        }
+
+        @include panoramic {
+            font-size: 1.5rem;
+        }
+
+        @include tabletlarge {
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+    }
+    
+    .grid-servicios .serv-img {
+        width: 100%;
+    }
+}

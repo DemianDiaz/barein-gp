@@ -1,0 +1,43 @@
+.trust-section {
+
+    .trust-container {
+
+        .title-trust {
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 5px grey;
+            text-align: center;
+            margin: 2rem;
+            margin-bottom: 3rem;
+
+            @include mobile {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .marcas {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1.5rem;
+            align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            @include panoramic {
+                margin-inline: 2rem;
+            }
+
+            .cliente {
+                border: 1px solid grey;
+
+                @include mobile {
+                    max-width: 30vw;
+                }
+            }
+        }
+    }
+}

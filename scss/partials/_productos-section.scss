@@ -1,0 +1,152 @@
+.productos-section {
+
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .05fr 1fr 1fr;
+        grid-template-areas: 
+            "titulo   titulo"
+            "pzero    cinturato"
+            "scorpion chrono";
+        row-gap: 3rem;
+        column-gap: 7rem;
+        margin-inline: 7rem;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            margin-inline: 2rem !important;
+        }
+
+        @include tabletsmall {
+            row-gap: 2rem;
+            column-gap: 0.5rem;
+            margin-inline: 1rem;
+        }
+
+        @include panoramic {
+            row-gap: 2rem;
+            column-gap: 4rem;
+            margin-inline: 4rem;
+        }
+
+        .prod-title {
+            grid-area: titulo;
+            justify-self: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 5px grey; 
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        .flia-pzero {
+            grid-area: pzero;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+
+            &:hover .family-title {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .flia-cinturato {
+            grid-area: cinturato;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .family-title {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .flia-scorpion {
+            grid-area: scorpion;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .family-title {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+        
+        .flia-chrono {
+            grid-area: chrono;
+            background-color: #e7e6e6a0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                border: 3px solid #dddd70;
+                background-color: #dddd70a3;
+                margin-inline: 0.5rem;
+            }
+            
+            &:hover .family-title {
+                text-align: center;
+                color: #7d1f1f;
+            }
+        }
+    }
+
+    .productos .family-title {
+        background-color: rgba(133, 126, 126, 0.715);
+        padding-inline: 1rem;
+
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+    
+    .productos .family-img {
+        width: 100%;
+    }
+    
+    .productos .family-text {
+        text-align: justify;
+
+        @include mobile {
+            font-size: 0.8rem;
+        }
+
+        @include tabletsmall {
+            font-size: 0.8rem;
+        }
+    }
+}
