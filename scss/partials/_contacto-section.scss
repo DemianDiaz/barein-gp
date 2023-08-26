@@ -21,7 +21,7 @@
         }
 
         .locales {
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -52,13 +52,23 @@
          
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .loc-title {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
+            }
+        }
+
+        .maps {
+            @include tabletsmall {
+                width: 95%;
+            }
+
+            @include mobile {
+                max-height: 60vh;
             }
         }
     }

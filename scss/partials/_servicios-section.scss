@@ -45,7 +45,7 @@
 
         .serv-alineacion {
             grid-area: alineacion;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -53,19 +53,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .subtitle {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .serv-balanceo {
             grid-area: balanceo;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -73,19 +73,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .subtitle {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .serv-frenos {
             grid-area: frenos;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -93,19 +93,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .subtitle {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .serv-suspension {
             grid-area: suspension;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -113,19 +113,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .subtitle {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .serv-tren {
             grid-area: tren;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -133,19 +133,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .subtitle {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .serv-mecanica {
             grid-area: mecanica;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -153,13 +153,13 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .subtitle {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
     }

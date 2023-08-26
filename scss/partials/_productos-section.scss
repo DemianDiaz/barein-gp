@@ -3,9 +3,10 @@
     .productos {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: .05fr 1fr 1fr;
+        grid-template-rows: .05fr 0.4fr 1fr 1fr;
         grid-template-areas: 
             "titulo   titulo"
+            "article  article"
             "pzero    cinturato"
             "scorpion chrono";
         row-gap: 3rem;
@@ -44,9 +45,40 @@
             }
         }
 
+        .article-neumaticos {
+            grid-area: article;
+            justify-self: center;
+            align-items: center;
+
+            .productos-introduccion {
+                width: 40vw;
+                justify-items: center;
+                background-color: white;
+                border-radius: 2%;
+                justify-self: center;
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                color: black;
+                padding-inline: 1rem;
+                padding-top: 1.5rem;
+                padding-bottom: 0.5rem;
+
+                @include tabletlarge {
+                    width: 60vw;
+                    font-size: 0.8rem;
+                }
+
+                @include mobile {
+                    width: 100%;
+                    justify-self: center;
+                }
+            }
+        }
+
         .flia-pzero {
             grid-area: pzero;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -54,19 +86,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
 
             &:hover .family-title {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .flia-cinturato {
             grid-area: cinturato;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -74,19 +106,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .family-title {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .flia-scorpion {
             grid-area: scorpion;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -94,19 +126,19 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .family-title {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
         
         .flia-chrono {
             grid-area: chrono;
-            background-color: #e7e6e6a0;
+            background-color: $cajita-colorprincipal;
             border: 1px solid white;
             border-radius: 10px;
             padding: 1rem;
@@ -114,13 +146,13 @@
 
             &:hover {
                 border: 3px solid #dddd70;
-                background-color: #dddd70a3;
+                background-color: $cajita-colorhover;
                 margin-inline: 0.5rem;
             }
             
             &:hover .family-title {
                 text-align: center;
-                color: #7d1f1f;
+                color: $cajita-titlehover;
             }
         }
     }
