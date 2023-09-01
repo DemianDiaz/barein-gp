@@ -1,0 +1,40 @@
+.opiniones {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+    margin-inline: 25%;
+    padding: 1.5rem;
+
+    @include tabletlarge {
+        margin-inline: 20%;
+    }
+
+    @include tabletsmall {
+        margin-inline: 3rem;
+    }
+
+    @include mobile {
+        margin-inline: 0.5rem;
+        padding-inline: 0.2rem;
+    }
+
+    &__titulo {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        text-align: center;
+
+        @include tabletsmall {
+            font-size: 1.5rem;
+        }
+
+        @include mobile {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__carousel {
+        justify-content: center;
+    } 
+}

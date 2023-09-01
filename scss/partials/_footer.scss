@@ -36,6 +36,23 @@ footer {
 
         }
 
+        .insumos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            align-content: center;
+
+            &__logo {
+                width: 7vw;
+            }
+
+            @include panoramic {
+                display: none;
+            }
+        }
+
         .links-container {
             display: flex;
             justify-items: center;

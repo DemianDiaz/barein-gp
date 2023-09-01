@@ -1,6 +1,7 @@
 .principal {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 
     @include mobile {
         font-size: 0.8rem;
@@ -15,7 +16,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         border: 1px solid white;
-        border-radius: 1%;
+        border-radius: 10px;
         background-color: #ffffff3b;
         margin-bottom: 2rem;
         margin-inline: 7rem;
@@ -27,7 +28,7 @@
         }
 
         @include tabletsmall {
-            margin-inline: 3rem;
+            margin-inline: 2rem;
         }
 
         .textoinicio .titulo1 {
