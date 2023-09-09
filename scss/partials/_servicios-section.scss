@@ -1,4 +1,5 @@
 .servicios-section {
+    margin-top: 2rem;
 
     .grid-servicios {
         display: grid;
@@ -35,11 +36,13 @@
             grid-area: titulo;
             justify-self: center;
             color: white;
-            font-size: 2.5rem;
+            font-size: 5rem;
+            font-weight: 800;
             text-shadow: 2px 5px grey;
 
             @include mobile {
                 text-align: center;
+                font-size: 2.8rem;
             }
         }
 

@@ -24,6 +24,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 1.5rem;
 
         @include tabletsmall {
             font-size: 1.5rem;
@@ -36,5 +37,103 @@
 
     &__carousel {
         justify-content: center;
+
+        &__comentario {
+            display: grid !important;
+            grid-template-columns: 0.2fr 1fr 2.5fr 0.1fr;
+            grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 1fr;
+            grid-template-areas: 
+                "icono nombre     nombre     menu"
+                "icono reputacion aportes    menu"
+                ".     estrellas  antiguedad ."
+                ".     texto      texto      texto"
+                ".     like       .          .";
+            padding-inline: 1rem;
+
+                @include mobile {
+                    font-size: 0.8rem;
+                }
+
+                &__icono {
+                    grid-area: icono;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2rem;
+                    padding-right: 0.5rem;
+                    margin-bottom: 0;
+                }
+
+                &__nombre {
+                    grid-area: nombre;
+                    justify-content: left;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                }
+
+                &__menu {
+                    grid-area: menu;
+                    justify-content: right;
+                    align-items: center;
+                }
+
+                &__reputacion {
+                    grid-area: reputacion;
+                    text-align: left;
+                    margin-bottom: 0;
+
+                    @include mobile {
+                        font-size: 0.5rem;
+                    }
+                }
+
+                &__aportes {
+                    grid-area: aportes;
+                    text-align: left;
+                    color: grey;
+                    margin-bottom: 0;
+
+                    @include mobile {
+                        font-size: 0.5rem;
+                    }
+                }
+
+                &__estrellas {
+                    grid-area: estrellas;
+                    color: yellow;
+                    text-align: left;
+                    margin-bottom: 0;
+
+                    @include mobile {
+                        font-size: 0.5rem;
+                    }
+                }
+
+                &__antiguedad {
+                    grid-area: antiguedad;
+                    text-align: left;
+                    color: grey;
+                    margin-bottom: 0;
+
+                    @include mobile {
+                        font-size: 0.5rem;
+                    }
+                }
+
+                &__texto {
+                    grid-area: texto;
+                    text-align: left;
+                    margin-block: 0.5rem;
+                }
+
+                &__like {
+                    grid-area: like;
+                    color: grey;
+                    margin-bottom: 0;
+
+                    @include mobile {
+                        font-size: 0.5rem;
+                    }
+                }
+        }
     } 
 }

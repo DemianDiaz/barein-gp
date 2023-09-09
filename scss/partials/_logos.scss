@@ -1,4 +1,7 @@
 .logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 
     @include mobile {
         margin-top: 1rem;
@@ -26,8 +29,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-block: 1vw;
-            padding-block: 0.2rem;
+            margin-block: 20%;
             border: 1px solid white;
             font-family: 'Antonio', sans-serif;
             font-weight: 600;

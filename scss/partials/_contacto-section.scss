@@ -1,11 +1,18 @@
 .contacto-section {
-
+    margin-top: 2rem;
+    
     .contact-title {
         text-align: center;
         color: white;
-        font-size: 2.5rem;
+        font-size: 5rem;
+        font-weight: 800;
         text-shadow: 2px 5px grey;
         margin-bottom: 3rem;
+
+        @include mobile {
+            text-align: center;
+            font-size: 2.8rem;
+        }
     }
 
     .suc-mobile {

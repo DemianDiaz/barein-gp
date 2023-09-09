@@ -1,9 +1,10 @@
 .productos-section {
-
+    margin-top: 2rem;
+    
     .productos {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: .05fr 0.4fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.4fr 1fr 1fr;
         grid-template-areas: 
             "titulo   titulo"
             "article  article"
@@ -33,15 +34,22 @@
             margin-inline: 4rem;
         }
 
+        h1 {
+            font-size: unset;
+            font-weight: unset;
+        }
+
         .prod-title {
             grid-area: titulo;
             justify-self: center;
             color: white;
-            font-size: 2rem;
+            font-size: 5rem;
+            font-weight: 800;
             text-shadow: 2px 5px grey; 
 
             @include mobile {
                 text-align: center;
+                font-size: 2.8rem;
             }
         }
 
@@ -168,6 +176,7 @@
     
     .productos .family-img {
         width: 100%;
+        margin-bottom: 1rem;
     }
     
     .productos .family-text {

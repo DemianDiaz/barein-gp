@@ -107,6 +107,11 @@ header .navbar-desktop .navegador a {
     opacity: 1;
   }
 }
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 @media screen and (max-width: 600px) {
   .logo-container {
     margin-top: 1rem;
@@ -133,8 +138,7 @@ header .navbar-desktop .navegador a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-block: 1vw;
-  padding-block: 0.2rem;
+  margin-block: 20%;
   border: 1px solid white;
   font-family: "Antonio", sans-serif;
   font-weight: 600;
@@ -260,10 +264,10 @@ header .navbar-desktop .navegador a {
   font-weight: 400;
   border: 1px solid white;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.231372549);
+  background-color: rgba(255, 255, 255, 0.6352941176);
   margin-bottom: 2rem;
   margin-inline: 7rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 @media screen and (max-width: 600px) {
   .principal .textoinicio {
@@ -311,6 +315,7 @@ header .navbar-desktop .navegador a {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 769px) {
   .opiniones__titulo {
@@ -324,6 +329,95 @@ header .navbar-desktop .navegador a {
 }
 .opiniones__carousel {
   justify-content: center;
+}
+.opiniones__carousel__comentario {
+  display: grid !important;
+  grid-template-columns: 0.2fr 1fr 2.5fr 0.1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 1fr;
+  grid-template-areas: "icono nombre     nombre     menu" "icono reputacion aportes    menu" ".     estrellas  antiguedad ." ".     texto      texto      texto" ".     like       .          .";
+  padding-inline: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .opiniones__carousel__comentario {
+    font-size: 0.8rem;
+  }
+}
+.opiniones__carousel__comentario__icono {
+  grid-area: icono;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding-right: 0.5rem;
+  margin-bottom: 0;
+}
+.opiniones__carousel__comentario__nombre {
+  grid-area: nombre;
+  justify-content: left;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.opiniones__carousel__comentario__menu {
+  grid-area: menu;
+  justify-content: right;
+  align-items: center;
+}
+.opiniones__carousel__comentario__reputacion {
+  grid-area: reputacion;
+  text-align: left;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .opiniones__carousel__comentario__reputacion {
+    font-size: 0.5rem;
+  }
+}
+.opiniones__carousel__comentario__aportes {
+  grid-area: aportes;
+  text-align: left;
+  color: grey;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .opiniones__carousel__comentario__aportes {
+    font-size: 0.5rem;
+  }
+}
+.opiniones__carousel__comentario__estrellas {
+  grid-area: estrellas;
+  color: yellow;
+  text-align: left;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .opiniones__carousel__comentario__estrellas {
+    font-size: 0.5rem;
+  }
+}
+.opiniones__carousel__comentario__antiguedad {
+  grid-area: antiguedad;
+  text-align: left;
+  color: grey;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .opiniones__carousel__comentario__antiguedad {
+    font-size: 0.5rem;
+  }
+}
+.opiniones__carousel__comentario__texto {
+  grid-area: texto;
+  text-align: left;
+  margin-block: 0.5rem;
+}
+.opiniones__carousel__comentario__like {
+  grid-area: like;
+  color: grey;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .opiniones__carousel__comentario__like {
+    font-size: 0.5rem;
+  }
 }
 
 footer {
@@ -409,12 +503,22 @@ footer .copyright {
   background-position: top center;
 }
 
+.contacto-section {
+  margin-top: 2rem;
+}
 .contacto-section .contact-title {
   text-align: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 5rem;
+  font-weight: 800;
   text-shadow: 2px 5px grey;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .contacto-section .contact-title {
+    text-align: center;
+    font-size: 2.8rem;
+  }
 }
 .contacto-section .suc-mobile {
   display: flex;
@@ -589,10 +693,13 @@ footer .copyright {
   }
 }
 
+.productos-section {
+  margin-top: 2rem;
+}
 .productos-section .productos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.05fr 0.4fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.4fr 1fr 1fr;
   grid-template-areas: "titulo   titulo" "article  article" "pzero    cinturato" "scorpion chrono";
   row-gap: 3rem;
   column-gap: 7rem;
@@ -621,16 +728,22 @@ footer .copyright {
     margin-inline: 4rem;
   }
 }
+.productos-section .productos h1 {
+  font-size: unset;
+  font-weight: unset;
+}
 .productos-section .productos .prod-title {
   grid-area: titulo;
   justify-self: center;
   color: white;
-  font-size: 2rem;
+  font-size: 5rem;
+  font-weight: 800;
   text-shadow: 2px 5px grey;
 }
 @media screen and (max-width: 600px) {
   .productos-section .productos .prod-title {
     text-align: center;
+    font-size: 2.8rem;
   }
 }
 .productos-section .productos .article-neumaticos {
@@ -743,6 +856,7 @@ footer .copyright {
 }
 .productos-section .productos .family-img {
   width: 100%;
+  margin-bottom: 1rem;
 }
 .productos-section .productos .family-text {
   text-align: justify;
@@ -807,6 +921,9 @@ footer .copyright {
   font-family: "Poppins", sans-serif;
 }
 
+.servicios-section {
+  margin-top: 2rem;
+}
 .servicios-section .grid-servicios {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -841,12 +958,14 @@ footer .copyright {
   grid-area: titulo;
   justify-self: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 5rem;
+  font-weight: 800;
   text-shadow: 2px 5px grey;
 }
 @media screen and (max-width: 600px) {
   .servicios-section .grid-servicios .serv-title {
     text-align: center;
+    font-size: 2.8rem;
   }
 }
 .servicios-section .grid-servicios .serv-alineacion {
@@ -1029,11 +1148,22 @@ footer .copyright {
   }
 }
 
+.venta-section {
+  margin-top: 2rem;
+}
 .venta-section .title-venta {
   color: white;
-  font-size: 2.2rem;
+  font-size: 4.5rem;
+  font-weight: 800;
   text-shadow: 2px 5px grey;
   text-align: center;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .venta-section .title-venta {
+    text-align: center;
+    font-size: 2.8rem;
+  }
 }
 .venta-section .vta-form .mb-3 {
   margin-inline: 5rem;
@@ -1098,7 +1228,8 @@ footer .copyright {
 }
 .trust-section .trust-container .title-trust {
   color: white;
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-weight: 800;
   text-shadow: 2px 5px grey;
   text-align: center;
   margin: 2rem;
@@ -1107,6 +1238,7 @@ footer .copyright {
 @media screen and (max-width: 600px) {
   .trust-section .trust-container .title-trust {
     margin-bottom: 1rem;
+    font-size: 2rem;
   }
 }
 .trust-section .trust-container .marcas {
