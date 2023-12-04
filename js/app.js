@@ -1,32 +1,110 @@
-let usuario = prompt("Ingrese su nombre");
+let carrito = obtenerDeLs();
 
-while ((usuario === "") || (!isNaN(usuario))) {
-    alert("Valor incorrecto");
-    usuario = prompt("Ingrese su nombre");
+const articulos = [
+    {nombre: "cinturato1", medida: "175/65R14", precio: 68352, img: "../img/familiacinturato.jpg"},
+    {nombre: "cinturato2", medida: "185/65R14", precio: 81548, img: "../img/familiacinturato.jpg"},
+    {nombre: "pzero1", medida: "255/35R18", precio: 300259, img: "../img/familiapzero.jpg"},
+    {nombre: "pzero2", medida: "225/40R18", precio: 201667, img: "../img/familiapzero.jpg"},
+    {nombre: "scorpion1", medida: "205/60R16", precio: 153348, img: "../img/familiascorpion.jpg"},
+    {nombre: "scorpion2", medida: "215/55R18", precio: 232533, img: "../img/familiascorpion.jpg"},
+    {nombre: "chrono1", medida: "205/70R15", precio: 194715, img: "../img/familiachrono.jpg"},
+    {nombre: "chrono2", medida: "195/75R16", precio: 169558, img: "../img/familiachrono.jpg"},
+]
+
+function mostrarArticulos(articulosFiltrados) {
+    const tienda = document.getElementById("tienda");
+    tienda.innerHTML = "";
+    articulosFiltrados.map(articulo => {
+        const divArticulo = document.createElement("div");
+            divArticulo.classList.add("card", "m-2");
+            divArticulo.style.width = "18rem";
+            divArticulo.innerHTML = `
+                <div class="card" style="width: 18rem;">
+                    <img src="${articulo.img}" class="card-img-top" alt="Imagen de ${articulo.nombre}">
+                    <div class="card-body">
+                        <h5 class="card-title">${articulo.nombre}</h5>
+                        <p class="card-text">${articulo.medida}</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('${articulo.nombre}', ${articulo.precio})">Agregar al Carrito</button>
+                    </div>
+                </div>`
+            tienda.appendChild(divArticulo);
+    });
 }
 
-const saludar = (usuario) => {alert("Bienvenido/a " + usuario + " a nuestro sitio web!")}
-
-let cuantasUnidades = parseInt(prompt("¿Cuántas unidades desea comprar?"));
-
-while ((cuantasUnidades === "") || (isNaN(cuantasUnidades))) {
-    alert("Por favor ingrese un número");
-    cuantasUnidades = parseInt(prompt("¿Cuántas unidades desea comprar?"));
+function filtrarArticulos() {
+    const textoBusqueda = document.getElementById("buscadorArticulo").value.toLowerCase();
+    const articulosFiltrados = articulos.filter((articulo) => articulo.nombre.includes(textoBusqueda));
+    mostrarArticulos(articulosFiltrados);
 }
 
-if (cuantasUnidades >= 6) {
-    alert("¿Desea comprar en gran cantidad?  Visite nuestra sección Venta Corporativa");
-    saludar(usuario);
-    } else {
-        saludar(usuario);
-        }
-
-if ((cuantasUnidades >= 6)  && (cuantasUnidades <= 10)) {
-    console.log("Por este volúmen de compra obtiene un 5% de descuento");
-} else if ((cuantasUnidades >= 11) && (cuantasUnidades <= 20)) {
-    console.log("Por este volúmen de compra obtiene un 10% de descuento");
-} else if ((cuantasUnidades >= 21)) {
-    console.log("Por este volúmen de compra obtiene un 15% de descuento");
-} else {
-    console.log("Por este volúmen de compra no hay descuentos");
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({nombre, precio}); 
+    actualizarListaCarrito();
+    mostrarModal();
+    guardarEnLs();
 }
+
+function actualizarListaCarrito() {
+    const listaCarrito = document.getElementById('listaCarrito');
+    listaCarrito.innerHTML = "";
+    carrito.map((articulo, index) => {
+        let item = document.createElement('li');
+        item.classList.add('list-group-item');
+        item.innerHTML = `
+            ${articulo.nombre} - Precio $ ${articulo.precio} - Iva $ ${((articulo.precio)*0.21).toFixed(2)} - Subtotal $ ${(articulo.precio)*1.21}
+            <span class="fas fa-trash-alt float-right" style="cursor: pointer;" onclick="eliminarDelCarrito(${index})"></span>`;
+            listaCarrito.appendChild(item);
+    });
+}
+
+function mostrarModal() {
+    const modalElement = document.getElementById('carritoModal');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();  
+}
+
+function cerrarModal() {
+    const modal = new bootstrap.Modal(document.getElementById('carritoModal'));
+    modal.hide();
+}
+
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarListaCarrito();
+    localStorage.setItem("carritoGuardado", JSON.stringify(carrito));
+}
+
+function guardarEnLs() {
+    const carritoAguardar = JSON.stringify(carrito);
+    localStorage.setItem("carritoGuardado", carritoAguardar)
+}
+
+function obtenerDeLs() {
+    const carritoEnLs = JSON.parse(localStorage.getItem("carritoGuardado")) || [];
+    return carritoEnLs;
+}
+
+function verificarLs() {
+    return !!localStorage.getItem("carritoGuardado");
+}
+
+function vaciarCarrito() {
+        carrito.splice(0, carrito.length);
+        localStorage.clear();
+        actualizarListaCarrito();
+}
+
+function finalizarCompra() {
+    let finCompra = document.getElementById('finalizar');
+    finCompra.innerHTML = `<p class= "blockquote">Será dirigido a nuestra página de pagos...</p>`
+    vaciarCarrito();
+    setTimeout(() => {
+        finCompra.innerHTML = '';
+    }, 5000);
+}
+
+document.getElementById("buscadorArticulo").addEventListener("input", filtrarArticulos);
+
+mostrarArticulos(articulos);
+
+document.getElementById('cerrar').addEventListener("click", cerrarModal);

@@ -1,0 +1,34 @@
+#tienda-de-productos {
+    margin-block: 4rem;
+
+    .filtro {
+        padding-inline: 5vw;
+        margin-block: 1rem;
+
+        #buscadorArticulo {
+            margin-inline: 3rem;
+            border-radius: 10px;
+            border: none;
+            text-indent: 0.5rem;
+        }
+
+    }
+
+    .tienda-title {
+        color: white;
+        font-size: 5rem;
+        font-weight: 800;
+        text-shadow: 2px 5px grey;
+        text-align: center;
+
+        @include mobile {
+            text-align: center;
+            font-size: 2.8rem;
+        }
+    }
+
+    #tienda {
+        justify-content: center;
+        text-align: center;
+    }
+}

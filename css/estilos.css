@@ -784,6 +784,8 @@ footer .copyright {
   border-radius: 10px;
   padding: 1rem;
   transition: 0.5s;
+  text-decoration: none;
+  color: black;
 }
 .productos-section .productos .flia-pzero:hover {
   border: 3px solid #dddd70;
@@ -801,6 +803,8 @@ footer .copyright {
   border-radius: 10px;
   padding: 1rem;
   transition: 0.5s;
+  text-decoration: none;
+  color: black;
 }
 .productos-section .productos .flia-cinturato:hover {
   border: 3px solid #dddd70;
@@ -818,6 +822,8 @@ footer .copyright {
   border-radius: 10px;
   padding: 1rem;
   transition: 0.5s;
+  text-decoration: none;
+  color: black;
 }
 .productos-section .productos .flia-scorpion:hover {
   border: 3px solid #dddd70;
@@ -835,6 +841,8 @@ footer .copyright {
   border-radius: 10px;
   padding: 1rem;
   transition: 0.5s;
+  text-decoration: none;
+  color: black;
 }
 .productos-section .productos .flia-chrono:hover {
   border: 3px solid #dddd70;
@@ -914,6 +922,37 @@ footer .copyright {
     opacity: 1;
   }
 }
+#tienda-de-productos {
+  margin-block: 4rem;
+}
+#tienda-de-productos .filtro {
+  padding-inline: 5vw;
+  margin-block: 1rem;
+}
+#tienda-de-productos .filtro #buscadorArticulo {
+  margin-inline: 3rem;
+  border-radius: 10px;
+  border: none;
+  text-indent: 0.5rem;
+}
+#tienda-de-productos .tienda-title {
+  color: white;
+  font-size: 5rem;
+  font-weight: 800;
+  text-shadow: 2px 5px grey;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #tienda-de-productos .tienda-title {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+}
+#tienda-de-productos #tienda {
+  justify-content: center;
+  text-align: center;
+}
+
 .body-servicios {
   background-image: url(../img/fondoservicios.jpg);
   background-size: cover;
@@ -1266,6 +1305,39 @@ footer .copyright {
   .trust-section .trust-container .marcas .cliente {
     max-width: 30vw;
   }
+}
+
+#carritoModal {
+  margin: 0;
+  width: auto;
+}
+@media screen and (max-width: 600px) {
+  #carritoModal {
+    font-size: 0.5rem;
+  }
+}
+#carritoModal .modal-dialog {
+  margin: 0;
+  max-width: 650px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#carritoModal .modal-dialog .modal-content {
+  width: 100%;
+}
+#carritoModal .modal-dialog .modal-content .modal-header {
+  background-color: #f8f9fa;
+}
+#carritoModal .modal-dialog .modal-content .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+#carritoModal .modal-dialog .modal-content .modal-body ul {
+  white-space: nowrap;
+}
+#carritoModal .modal-dialog .modal-content .modal-body ul .list-group-item {
+  display: block;
 }
 
 /*# sourceMappingURL=estilos.css.map */

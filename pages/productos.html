@@ -8,6 +8,7 @@
     <meta name="keywords" content="neumáticos, gomas, cubiertas, llantas, pirelli, performance center, gomería, firestone, bridgestone, fate, continental, goodyear, dunlop, pzero, chrono, scorpion, cinturato">
     <link rel="shortcut icon" href="../img/logobarein.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -63,7 +64,7 @@
             </div>
         </div>
     </div>
-    <main>
+    <main id="main">
         <section class="productos-section">
             <div class="productos">
                 <div class="prod-title">
@@ -72,29 +73,59 @@
                 <div class="article-neumaticos">
                     <article class="productos-introduccion">
                         <P>El catálogo de neumáticos Pirelli presenta el resultado de años de inversión, investigación e innovación e incluye una amplia gama de neumáticos, diseñados para diferentes modelos de automóviles, SUV y VAN. Los neumáticos Pirelli están diseñados para garantizar la máxima fiabilidad en presencia de altas temperaturas, gracias a una menor resistencia a la rodadura, un perfecto agarre sobre el asfalto y un menor espacio de frenado.</P>
-                </article>
+                    </article>
                 </div>
-                <div class="flia-pzero">
+                <a href="#tienda-de-productos" class="flia-pzero">
                     <h2 class="family-title">Familia P Zero</h2>
                     <img class="family-img" src="../img/familiapzero.jpg" alt="pzero">
                     <p class="family-text">P ZERO™ es la gama de neumáticos que combina la experiencia de Pirelli y la colaboración con los mejores fabricantes de automóviles para ofrecer las mejores prestaciones.</p>
-                </div>
-                <div class="flia-cinturato">
+                </a>
+                <a href="#tienda-de-productos" class="flia-cinturato">
                     <h2 class="family-title">Familia Cinturato</h2>
                     <img class="family-img" src="../img/familiacinturato.jpg" alt="cinturato">
                     <p class="family-text">La familia Cinturato™ satisface las necesidades de aquellos que buscan neumáticos con un bajo impacto ambiental. Gracias al uso de nuevos materiales ecológicos y una menor resistencia a la rodadura, los neumáticos Cinturato™ contribuyen a reducir las emisiones de CO² de los vehículos.</p>
-                </div>
-                <div class="flia-scorpion">
+                </a>
+                <a href="#tienda-de-productos" class="flia-scorpion">
                     <h2 class="family-title">Familia Scorpion</h2>
                     <img class="family-img" src="../img/familiascorpion.jpg" alt="scorpion">
                     <p class="family-text">Teniendo en cuenta la evolución que ha caracterizado al segmento SUV y Crossover en los últimos años, Pirelli ha decidido dedicar toda una gama de neumáticos a este tipo específico de vehículos: se trata de la línea Scorpion™.</p>
-                </div>
-                <div class="flia-chrono">
+                </a>
+                <a href="#tienda-de-productos" class="flia-chrono">
                     <h2 class="family-title">Familia Chrono</h2>
                     <img class="family-img" src="../img/familiachrono.jpg" alt="chrono">
                     <p class="family-text">Neumático versátil tanto para los viajes cortos y como largos.  Diseñada específicamente para los vehículos comerciales. Un producto que coincide con las características de desempeño de los neumáticos de autos con las tipologías tradicionales de las llantas para vehículos comerciales.</p>
-                </div>
+                </a>
             </div>
+        </section>
+        <section id="tienda-de-productos">
+            <h2 class="tienda-title">Tienda de Productos</h2>
+            <div class="filtro">
+                <input type="text" id="buscadorArticulo" placeholder="Buscar producto...">
+            </div>
+            <div id="tienda" class="d-flex flex-wrap"></div>
+
+            <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="cerrar" data-bs-dismiss="modal"   >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <ul id="listaCarrito" class="list-group">
+                        
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" id="vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                      <button type="button" class="btn btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+                      <div id="finalizar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </section>
     </main>
     <footer>
@@ -150,5 +181,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../js/app.js" async></script>
 </body>
 </html>
