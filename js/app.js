@@ -24,7 +24,7 @@ function mostrarArticulos(articulosFiltrados) {
                     <div class="card-body">
                         <h5 class="card-title">${articulo.nombre}</h5>
                         <p class="card-text">${articulo.medida}</p>
-                        <button class="btn btn-primary" onclick="agregarAlCarrito('${articulo.nombre}', ${articulo.precio})">Agregar al Carrito</button>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('${articulo.nombre}', ${articulo.precio}, '${articulo.img}')">Agregar al Carrito</button>
                     </div>
                 </div>`
             tienda.appendChild(divArticulo);
@@ -37,8 +37,8 @@ function filtrarArticulos() {
     mostrarArticulos(articulosFiltrados);
 }
 
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({nombre, precio}); 
+function agregarAlCarrito(nombre, precio, img) {
+    carrito.push({nombre, precio, img}); 
     actualizarListaCarrito();
     mostrarModal();
     guardarEnLs();
@@ -50,10 +50,14 @@ function actualizarListaCarrito() {
     carrito.map((articulo, index) => {
         let item = document.createElement('li');
         item.classList.add('list-group-item');
-        item.innerHTML = `
-            ${articulo.nombre} - Precio $ ${articulo.precio} - Iva $ ${((articulo.precio)*0.21).toFixed(2)} - Subtotal $ ${(articulo.precio)*1.21}
-            <span class="fas fa-trash-alt float-right" style="cursor: pointer;" onclick="eliminarDelCarrito(${index})"></span>`;
-            listaCarrito.appendChild(item);
+        item.innerHTML = 
+            `<div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="margin-right: 10px;">
+                    <img src="${articulo.img}" alt="Imagen de ${articulo.nombre}" style="max-width: 50px; max-height: 50px;"> - ${articulo.nombre} - $ ${articulo.precio} - Subtotal $ ${(articulo.precio)}
+                </div>
+                <span class="fas fa-trash-alt" style="cursor: pointer;" onclick="eliminarDelCarrito(${index})"></span>
+            </div>`;
+        listaCarrito.appendChild(item);
     });
 }
 
