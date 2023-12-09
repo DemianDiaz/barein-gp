@@ -97,6 +97,17 @@ function eliminarDelCarrito(index) {
     mostrarCantItems();
     sumarTotal();
     localStorage.setItem("carritoGuardado", JSON.stringify(carrito));
+
+    Toastify({
+        text: "Producto eliminado",
+        duration: 3000,
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
 }
 
 function guardarEnLs() {
@@ -119,6 +130,17 @@ function vaciarCarrito() {
         actualizarListaCarrito();
         mostrarCantItems();
         sumarTotal();
+
+        Toastify({
+            text: "Se han eliminado todos los productos",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+          }).showToast();
 }
 
 function finalizarCompra() {
@@ -191,3 +213,8 @@ document.getElementById("buscadorArticulo").addEventListener("input", filtrarArt
 mostrarArticulos(articulos);
 
 document.getElementById('cerrar').addEventListener("click", cerrarModal);
+
+mostrarCantItems();
+carrito = obtenerDeLs();
+actualizarListaCarrito();
+mostrarCantItems();
