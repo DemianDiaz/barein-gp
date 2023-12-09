@@ -26,11 +26,39 @@ header {
             display: none;
         }
 
+        #lista-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-right: 1rem;
+    
+            .carrito-container {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .cart-icon {
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+    
+            .burbuja-cantidad {
+                position: absolute;
+                top: -0.5rem;
+                right: -1rem;
+                background-color: red;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 50%;
+                font-size: 0.6rem;
+            }
+        }
+
         .navegador {
             list-style-type: none;
             display: flex;
             justify-content: space-around;
-            padding: 2rem;
+            padding-block: 1rem;
             margin-bottom: 1.5rem;
             color: white;
             font-family: 'Antonio', sans-serif;

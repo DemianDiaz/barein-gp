@@ -41,11 +41,35 @@ header {
     display: none;
   }
 }
+header .navbar-desktop #lista-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+header .navbar-desktop #lista-menu .carrito-container {
+  position: relative;
+  display: inline-block;
+}
+header .navbar-desktop #lista-menu .cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+header .navbar-desktop #lista-menu .burbuja-cantidad {
+  position: absolute;
+  top: -0.5rem;
+  right: -1rem;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 0.6rem;
+}
 header .navbar-desktop .navegador {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  padding: 2rem;
+  padding-block: 1rem;
   margin-bottom: 1.5rem;
   color: white;
   font-family: "Antonio", sans-serif;
@@ -1313,7 +1337,7 @@ footer .copyright {
 }
 @media screen and (max-width: 600px) {
   #carritoModal {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 #carritoModal .modal-dialog {
