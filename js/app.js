@@ -1,15 +1,29 @@
 let carrito = obtenerDeLs();
 
-const articulos = [
-    {nombre: "cinturato1", medida: "175/65R14", precio: 68352, img: "../img/familiacinturato.jpg"},
-    {nombre: "cinturato2", medida: "185/65R14", precio: 81548, img: "../img/familiacinturato.jpg"},
-    {nombre: "pzero1", medida: "255/35R18", precio: 300259, img: "../img/familiapzero.jpg"},
-    {nombre: "pzero2", medida: "225/40R18", precio: 201667, img: "../img/familiapzero.jpg"},
-    {nombre: "scorpion1", medida: "205/60R16", precio: 153348, img: "../img/familiascorpion.jpg"},
-    {nombre: "scorpion2", medida: "215/55R18", precio: 232533, img: "../img/familiascorpion.jpg"},
-    {nombre: "chrono1", medida: "205/70R15", precio: 194715, img: "../img/familiachrono.jpg"},
-    {nombre: "chrono2", medida: "195/75R16", precio: 169558, img: "../img/familiachrono.jpg"},
-]
+function obtenerInformacionProductos(){
+    return new Promise((resolve, reject) => {
+        fetch('../JSON/products.json')
+            .then(response => {
+                if(!response.status){
+                    throw new Error("Error al cargar los productos, comunicate con tu administrador");
+                }
+                return response.json();
+            })
+            .then(data => resolve(data))
+            .catch(error => reject(error));
+    });
+}
+
+async function productosAsincronico(){
+    try{
+        const informacionProductos = await obtenerInformacionProductos()
+        mostrarArticulos(informacionProductos)
+    }catch(error){
+        console.error("Error en la app", error)
+    }
+}
+
+productosAsincronico();
 
 function mostrarArticulos(articulosFiltrados) {
     const tienda = document.getElementById("tienda");
@@ -53,9 +67,12 @@ function agregarAlCarrito(nombre, precio, img) {
     } else {
         carrito.push({nombre, precio, img, cantidad: 1});
     }
+    Swal.fire({
+        text: "Se ha agregado el producto carrito",
+        icon: "success"
+      });
     actualizarListaCarrito();
     mostrarCantItems();
-    mostrarModal();
     sumarTotal()
     guardarEnLs();
 }
@@ -83,12 +100,9 @@ function actualizarListaCarrito() {
 function mostrarModal() {
     const modalElement = document.getElementById('carritoModal');
     const modal = new bootstrap.Modal(modalElement);
-    modal.show();  
-}
-
-function cerrarModal() {
-    const modal = new bootstrap.Modal(document.getElementById('carritoModal'));
-    modal.hide();
+    modal.show();
+    sumarTotal();
+    mostrarCantItems();
 }
 
 function eliminarDelCarrito(index) {
@@ -145,7 +159,7 @@ function vaciarCarrito() {
 
 function finalizarCompra() {
     let finCompra = document.getElementById('finalizar');
-    finCompra.innerHTML = `<p class= "blockquote" style="color: red; text-align: center;">Será dirigido a nuestra página de pagos...</p>`
+    finCompra.innerHTML = `<p class= "blockquote" style="color: red; text-align: center; font-weight: bold">Será dirigido a nuestra página de pagos...</p>`
     vaciarCarrito();
     setTimeout(() => {
         finCompra.innerHTML = '';
@@ -177,7 +191,11 @@ function sumarTotal() {
     const subtotales = carrito.map((articulo, index) => subtotalItem(articulo, index));
     const totalCompra = subtotales.reduce((acumulador, subtotal) => acumulador + subtotal, 0);
     let mostrarTotal = document.getElementById('monto-total');
-    mostrarTotal.innerHTML = `<p class="blockquote" style="color: red; text-align: center;">Total de su compra: $ ${totalCompra}</p>`;
+    if (carrito.length === 0) {
+        mostrarTotal.innerHTML = `<p class="blockquote" style="color: blue; text-align: center;">Su carrito está vacío</p>`;
+    } else {
+        mostrarTotal.innerHTML = `<p class="blockquote" style="color: red; text-align: center; font-weight: bold">Total de su compra: $ ${totalCompra}</p>`;
+    }
 }
 
 function mostrarIconoCarrito() {
@@ -198,11 +216,17 @@ function mostrarIconoCarrito() {
 function mostrarCantItems() {
     const burbujaCantidad = document.querySelector('.burbuja-cantidad');
     const cantidadItems = carrito.reduce((acumulador, articulo) => acumulador + articulo.cantidad, 0);
+    const vaciarCarritoBtn = document.getElementById('vaciar');
+    const finalizarCompraBtn = document.getElementById('finalizarCompraBtn');
     if (cantidadItems > 0) {
         burbujaCantidad.textContent = cantidadItems;
         burbujaCantidad.style.display = 'block';
+        vaciarCarritoBtn.disabled = false;
+        finalizarCompraBtn.disabled = false;
     } else {
         burbujaCantidad.style.display = 'none';
+        vaciarCarritoBtn.disabled = true;
+        finalizarCompraBtn.disabled = true;
     }
 }
 
@@ -211,8 +235,6 @@ mostrarIconoCarrito();
 document.getElementById("buscadorArticulo").addEventListener("input", filtrarArticulos);
 
 mostrarArticulos(articulos);
-
-document.getElementById('cerrar').addEventListener("click", cerrarModal);
 
 mostrarCantItems();
 carrito = obtenerDeLs();

@@ -1,0 +1,10 @@
+[
+    {"nombre": "cinturato1", "medida": "175/65R14", "precio": 68352, "img": "../img/familiacinturato.jpg"},
+    {"nombre": "cinturato2", "medida": "185/65R14", "precio": 81548, "img": "../img/familiacinturato.jpg"},
+    {"nombre": "pzero1", "medida": "255/35R18", "precio": 300259, "img": "../img/familiapzero.jpg"},
+    {"nombre": "pzero2", "medida": "225/40R18", "precio": 201667, "img": "../img/familiapzero.jpg"},
+    {"nombre": "scorpion1", "medida": "205/60R16", "precio": 153348, "img": "../img/familiascorpion.jpg"},
+    {"nombre": "scorpion2", "medida": "215/55R18", "precio": 232533, "img": "../img/familiascorpion.jpg"},
+    {"nombre": "chrono1", "medida": "205/70R15", "precio": 194715, "img": "../img/familiachrono.jpg"},
+    {"nombre": "chrono2", "medida": "195/75R16", "precio": 169558, "img": "../img/familiachrono.jpg"}
+]
