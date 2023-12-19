@@ -28,17 +28,17 @@ productosAsincronico();
 function mostrarArticulos(articulosFiltrados) {
     const tienda = document.getElementById("tienda");
     tienda.innerHTML = "";
-    articulosFiltrados.map(articulo => {
+    articulosFiltrados.map(({ img, nombre, medida, precio }) => {
         const divArticulo = document.createElement("div");
             divArticulo.classList.add("card", "m-2");
             divArticulo.style.width = "18rem";
             divArticulo.innerHTML = `
                 <div class="card" style="width: 18rem;">
-                    <img src="${articulo.img}" class="card-img-top" alt="Imagen de ${articulo.nombre}">
+                    <img src="${img}" class="card-img-top" alt="Imagen de ${nombre}">
                     <div class="card-body">
-                        <h5 class="card-title">${articulo.nombre}</h5>
-                        <p class="card-text">${articulo.medida}</p>
-                        <button class="btn btn-primary" onclick="agregarAlCarrito('${articulo.nombre}', ${articulo.precio}, '${articulo.img}')">Agregar al Carrito</button>
+                        <h5 class="card-title">${nombre}</h5>
+                        <p class="card-text">${medida}</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('${nombre}', ${precio}, '${img}')">Agregar al Carrito</button>
                     </div>
                 </div>`
             tienda.appendChild(divArticulo);
