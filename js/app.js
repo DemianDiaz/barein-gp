@@ -2,7 +2,7 @@ let carrito = obtenerDeLs();
 
 function obtenerInformacionProductos(){
     return new Promise((resolve, reject) => {
-        fetch('../JSON/products.json')
+        fetch('../JSON/articulos.json')
             .then(response => {
                 if(!response.status){
                     throw new Error("Error al cargar los productos, comunicate con tu administrador");
@@ -17,7 +17,10 @@ function obtenerInformacionProductos(){
 async function productosAsincronico(){
     try{
         const informacionProductos = await obtenerInformacionProductos()
-        mostrarArticulos(informacionProductos)
+        mostrarArticulos(informacionProductos);
+        obtenerDeLs();
+        actualizarListaCarrito();
+        mostrarCantItems();
     }catch(error){
         console.error("Error en la app", error)
     }
@@ -25,10 +28,10 @@ async function productosAsincronico(){
 
 productosAsincronico();
 
-function mostrarArticulos(articulosFiltrados) {
+function mostrarArticulos(data) {
     const tienda = document.getElementById("tienda");
     tienda.innerHTML = "";
-    articulosFiltrados.map(({ img, nombre, medida, precio }) => {
+    data.map(({ nombre, medida, precio, img }) => {
         const divArticulo = document.createElement("div");
             divArticulo.classList.add("card", "m-2");
             divArticulo.style.width = "18rem";
@@ -47,7 +50,7 @@ function mostrarArticulos(articulosFiltrados) {
 
 function filtrarArticulos() {
     const textoBusqueda = document.getElementById("buscadorArticulo").value.toLowerCase();
-    const articulosFiltrados = articulos.filter((articulo) => articulo.nombre.includes(textoBusqueda));
+    const articulosFiltrados = informacionProductos.filter((articulo) => articulo.nombre.includes(textoBusqueda));
     if (articulosFiltrados.length > 0) {
         mostrarArticulos(articulosFiltrados);
     } else {
@@ -73,7 +76,7 @@ function agregarAlCarrito(nombre, precio, img) {
       });
     actualizarListaCarrito();
     mostrarCantItems();
-    sumarTotal()
+    sumarTotal();
     guardarEnLs();
 }
 
@@ -89,7 +92,7 @@ function actualizarListaCarrito() {
         item.innerHTML = 
             `<div style="display: flex; justify-content: space-between; align-items: center;">
                 <div style="margin-right: 10px;">
-                    <img src="${articulo.img}" alt="Imagen de ${articulo.nombre}" style="max-width: 50px; max-height: 50px;"> - ${articulo.nombre} - $ ${articulo.precio} - <button class="btn btn-primary" onclick="restar(${index})">-</button> ${articulo.cantidad} <button class="btn btn-primary" onclick="sumar(${index})">+</button> - Subtotal $ ${(subtotalItem(articulo))}
+                    <img src="${articulo.img}" alt="Imagen de ${articulo.nombre}" style="max-width: 50px; max-height: 50px;"> - ${articulo.nombre} - $ ${articulo.precio} - <button class="btn btn-primary" style="font-size: 8px;" onclick="restar(${index})">-</button> ${articulo.cantidad} <button class="btn btn-primary" style="font-size: 8px;" onclick="sumar(${index})">+</button> - Subtotal $ ${(subtotalItem(articulo))}
                 </div>
                 <span class="fas fa-trash-alt" style="cursor: pointer;" onclick="eliminarDelCarrito(${index})"></span>
             </div>`;
@@ -171,6 +174,7 @@ function sumar(index) {
     actualizarListaCarrito();
     mostrarCantItems();
     sumarTotal();
+    guardarEnLs();
 }
 
 function restar(index) {
@@ -179,6 +183,7 @@ function restar(index) {
         actualizarListaCarrito();
         mostrarCantItems();
         sumarTotal();
+        guardarEnLs();
     }
 }
 
@@ -234,9 +239,6 @@ mostrarIconoCarrito();
 
 document.getElementById("buscadorArticulo").addEventListener("input", filtrarArticulos);
 
-mostrarArticulos(articulos);
-
 mostrarCantItems();
 carrito = obtenerDeLs();
 actualizarListaCarrito();
-mostrarCantItems();
