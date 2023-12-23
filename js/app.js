@@ -58,7 +58,7 @@ function filtrarArticulos() {
     articulosFiltrados.length > 0 ? mostrarArticulos(articulosFiltrados) : mostrarMensajeNoResultados();
 }
 
-function mostrarMensajeNoResultados() {
+const mostrarMensajeNoResultados = () => {
     const tienda = document.getElementById("tienda");
     tienda.innerHTML = `<p class="blockquote" style="color: white; text-align: center; font-size: 2rem;">No hay resultados para la búsqueda.</p>`;
 }
