@@ -1,4 +1,5 @@
 let carrito = obtenerDeLs();
+let articulos;
 
 function obtenerInformacionProductos(){
     return new Promise((resolve, reject) => {
@@ -9,7 +10,10 @@ function obtenerInformacionProductos(){
                 }
                 return response.json();
             })
-            .then(data => resolve(data))
+            .then(data => {
+                articulos = data;
+                resolve(data)
+            })
             .catch(error => reject(error));
     });
 }
@@ -28,10 +32,10 @@ async function productosAsincronico(){
 
 productosAsincronico();
 
-function mostrarArticulos(data) {
+function mostrarArticulos(articulos) {
     const tienda = document.getElementById("tienda");
     tienda.innerHTML = "";
-    data.map(({ nombre, medida, precio, img }) => {
+    articulos.map(({ nombre, medida, precio, img }) => {
         const divArticulo = document.createElement("div");
             divArticulo.classList.add("card", "m-2");
             divArticulo.style.width = "18rem";
@@ -50,12 +54,8 @@ function mostrarArticulos(data) {
 
 function filtrarArticulos() {
     const textoBusqueda = document.getElementById("buscadorArticulo").value.toLowerCase();
-    const articulosFiltrados = informacionProductos.filter((articulo) => articulo.nombre.includes(textoBusqueda));
-    if (articulosFiltrados.length > 0) {
-        mostrarArticulos(articulosFiltrados);
-    } else {
-        mostrarMensajeNoResultados();
-    }
+    const articulosFiltrados = articulos.filter((articulo) => articulo.nombre.includes(textoBusqueda));
+    articulosFiltrados.length > 0 ? mostrarArticulos(articulosFiltrados) : mostrarMensajeNoResultados();
 }
 
 function mostrarMensajeNoResultados() {
